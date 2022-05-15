@@ -85,7 +85,7 @@ final class ProfileCell: UITableViewCell {
         self.viewModel.downloadImage()
         self.viewModel.$profile
             .receive(on: DispatchQueue.main, options: nil)
-            .sink { [weak self] profile in \(profile.isFavourited ?? false)")
+            .sink { [weak self] profile in
                 self?.titleLabel.text = profile.login
                 self?.favouriteBtn.setImage(
                     UIImage(systemName: profile.isFavourited ?? false ?
